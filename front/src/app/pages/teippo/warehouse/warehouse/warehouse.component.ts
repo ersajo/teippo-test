@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'ngx-warehouse',
@@ -72,19 +71,16 @@ export class WarehouseComponent implements OnInit {
       request.send();
     });
   }
-    
 
   async getWarehouses() {
     this.loading = true;
-    
+
     this.getRequest('http://localhost:5000/api/warehouse')
         .then(response => {
-          console.log(response);
         })
         .catch(error => {
-          console.log(error);
         });
-    
+
     this.loading = false;
   }
 
