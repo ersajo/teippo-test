@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'ngx-warehouse',
   templateUrl: './warehouse.component.html',
-  styleUrls: ['./warehouse.component.scss']
+  styleUrls: ['./warehouse.component.scss'],
 })
 export class WarehouseComponent implements OnInit {
   source: LocalDataSource;
@@ -48,7 +48,6 @@ export class WarehouseComponent implements OnInit {
   };
 
   constructor(
-    private http: HttpClient,
   ) { }
 
   ngOnInit() {
